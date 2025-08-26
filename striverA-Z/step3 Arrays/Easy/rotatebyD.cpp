@@ -17,14 +17,14 @@ void rotate(int arr[], int n, int d)
     int temp[k];
 
     // storing d array
-    for (int i = 0; i < d; i++)
+    for (int i = 0; i < k; i++)
     {
         temp[i] = arr[i];
     }
     // shifting array
-    for (int i = d; i < n; i++)
+    for (int i = k; i < n; i++)
     {
-        arr[i - d] = arr[i];
+        arr[i - k] = arr[i];
     }
 
     // storing temp in array
@@ -63,8 +63,8 @@ int main()
 {
     int arr[5] = {1, 2, 3, 4, 5};
     int d = 2;
-    // rotate(arr, 5, d);
-    rotateD(arr, 5, d);
+    rotate(arr, 5, d);
+    // rotateD(arr, 5, d);
     for (int i = 0; i < 5; i++)
     {
         cout << arr[i] << " ";
